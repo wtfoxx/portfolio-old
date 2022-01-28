@@ -9,6 +9,10 @@
   --medium-font: 16px;
   --bold-text: 700;
   --regular-text: 300;
+  --regular-width: 700px;
+  --small-width: 250px;
+  --large-width: 1200px;
+  --standard-padding: 20px;
 }
 
 * {
@@ -90,7 +94,7 @@ button:hover, button:focus,
 .page-header {
   display: flex;
   width: 100%;
-  padding: 20px;
+  padding: var(--standard-padding);
   border-bottom: 1px solid var(--light-grey);
   margin-bottom: 50px;
 }
@@ -115,7 +119,7 @@ button:hover, button:focus,
 }
 
 .profile {
-  max-width: 700px;
+  max-width: var(--regular-width);
   margin: 0 auto;
   margin-top: 200px;
 }
@@ -125,22 +129,22 @@ button:hover, button:focus,
 }
 
 .content {
-  max-width: 700px;
+  max-width: var(--regular-width);
   margin: 0 auto;
   flex-direction: column;
   display: flex;
 }
 
 #contact-form {
-  max-width: 250px;
-  font-size: 16px;
+  max-width: var(--small-width);
+  font-size: var(--medium-font);
 }
 
 #contact-email, #contact-telephone, #contact-message {
   margin-bottom: 10px;
   border: 1px solid var(--dark-grey);
   padding: 8px;
-  font-size: 14px;
+  font-size: var(--small-font);
 }
 
 #contact-email:focus {
@@ -149,23 +153,23 @@ button:hover, button:focus,
 
 .profile__portrait {
   float: left;
-  width: 250px;
+  width: var(--small-width);
   height: auto;
   margin-right: 40px;
   border-radius: 50%;
 }
 
 .grid__section {
-  max-width: 1200px;
+  max-width: var(--large-width);
   margin: 0 auto;
-  padding: 0px 20px;
+  padding: 0px var(--standard-padding);
 }
 
 /* start grid fallback */
 .grid__item {
   display: inline-block;
   width: 33%;
-  padding: 20px;
+  padding: var(--standard-padding);
  }
  /* end grid fallback */
  
@@ -174,7 +178,7 @@ button:hover, button:focus,
     display: grid;
     /* grid-template-columns: 300px 300px 300px; fractions are better than pixels - they are responsive */
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px;
+    grid-gap: var(--standard-padding);
     margin: 0;
   }
   .grid__item {
@@ -182,7 +186,7 @@ button:hover, button:focus,
     width: auto;
     min-height: auto;
     margin: 0;
-    padding: 20px;
+    padding: var(--standard-padding);
   }
   .grid__item:last-child {
     grid-column: 3 / 3;
@@ -201,7 +205,7 @@ button:hover, button:focus,
     grid-template-columns: 1fr;
   }
   .grid__section {
-    padding: 0px 20px;
+    padding: 0px var(--standard-padding);
   }
 }
 @media all and (min-width: 500px) and (max-width: 750px){
@@ -209,7 +213,7 @@ button:hover, button:focus,
     grid-template-columns: 1fr 1fr;
   }
   .grid__section {
-    padding: 0px 20px;
+    padding: 0px var(--standard-padding);
   }
 }
 @media all and (max-width: 750px) {
@@ -221,7 +225,7 @@ button:hover, button:focus,
     grid-row: auto / auto;
   }
   .grid__section {
-    padding: 0px 20px;
+    padding: 0px var(--standard-padding);
   }
   h1 {
     font-size: 22px;
